@@ -9,6 +9,28 @@
 - 小红书视频：先读取公开文本和评论，如需口播，再结合文案抓取兜底。
 - B站 / YouTube / 网页 / RSS：可通过 agent-reach 进行内容读取和字幕/转写。
 
+## 安装
+
+在终端执行：
+
+```bash
+mkdir -p ~/.codex/skills/灵感提取
+curl -L https://raw.githubusercontent.com/huhuanyi7-cmd/linggan-tiqu-skill/main/SKILL.md \
+  -o ~/.codex/skills/灵感提取/SKILL.md
+```
+
+安装后，在 Codex 里这样调用：
+
+```text
+灵感提取：小红书 搜一下 装修避坑
+```
+
+```text
+灵感提取：抖音 <完整抖音分享文本>
+```
+
+注意：这个 Skill 是路由型入口。要完整使用小红书/抖音能力，需要按需配置 `agent-reach`、`xhs-cli`、本地「文案抓取」Skill、`yt-dlp`、`ffmpeg` 和 ASR 工具。
+
 ## 使用场景
 
 - 抖音 / 小红书内容灵感提取
